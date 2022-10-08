@@ -1,0 +1,19 @@
+{
+    "name": "MediaBase",
+    "categories": [
+        {
+            "title": "dog",
+            "category": [{
+                "name": "a",
+                "rating": 1
+            }]
+        },
+        {
+            "title": "cat",
+            "category": [{
+                "name": "b",
+                "rating": 2
+            }]
+        }
+    ]
+}
