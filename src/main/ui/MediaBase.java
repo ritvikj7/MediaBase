@@ -20,8 +20,7 @@ import static javax.swing.UIManager.get;
 // WorkRoomApp class found under ui in https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo.git
 
 public class MediaBase {
-
-    //
+    
     private static final String JSON_STORE = "./data/workroom.json";
 
     private ListOfMediaCategory loc; //loc stands for listOfCategories
