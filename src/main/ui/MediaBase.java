@@ -21,6 +21,7 @@ import static javax.swing.UIManager.get;
 
 public class MediaBase {
 
+    //
     private static final String JSON_STORE = "./data/workroom.json";
 
     private ListOfMediaCategory loc; //loc stands for listOfCategories
