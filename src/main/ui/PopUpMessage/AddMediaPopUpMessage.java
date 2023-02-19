@@ -5,32 +5,19 @@ import javax.swing.border.Border;
 import java.awt.*;
 
 // Sets up a pop-up window which indicates the media is added
-public class AddMediaPopUpMessage extends JFrame {
-    public static final int WIDTH = 500;
-    public static final int HEIGHT = 200;
+public class AddMediaPopUpMessage extends PopUpMessage {
 
     private JLabel logo;
 
     // initializes the different elements of the AddMediaPopUpMessage.
     public AddMediaPopUpMessage() {
-        initializeGraphics();
-        popUpWindowMessage();
-        this.getContentPane().setBackground(Color.BLACK);
-        setVisible(true);
+        super();
     }
 
-    // MODIFIES: this
-    // EFFECTS: Creates a JFrame with the specific specs
-    private void initializeGraphics() {
-        setMinimumSize(new Dimension(WIDTH, HEIGHT));
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setResizable(false);
-        setLayout(null);
-    }
-
+    @Override
     // MODIFIES: this
     // EFFECTS: Adds Image and label to a JFrame
-    private void popUpWindowMessage() {
+    public void popUpWindowMessage() {
         String sep = System.getProperty("file.separator");
         ImageIcon icon = new ImageIcon(new
                 ImageIcon(System.getProperty("user.dir") + sep
@@ -51,7 +38,5 @@ public class AddMediaPopUpMessage extends JFrame {
         this.add(label1);
         this.add(logo);
     }
-
-
 
 }
