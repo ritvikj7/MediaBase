@@ -39,56 +39,6 @@ into it correctly (such as Inception, To Kill a Mockingbird, Haikyuu).
 
 
 
-## Phase 4: Task 2
-Thu Aug 11 02:25:43 PDT 2022
-Created a new Media Category
-
-Thu Aug 11 02:25:47 PDT 2022
-Created a new Media Category
-
-Thu Aug 11 02:26:04 PDT 2022
-Added Media to a Media Category
-
-Thu Aug 11 02:26:12 PDT 2022
-Added Media to a Media Category
-
-Thu Aug 11 02:26:32 PDT 2022
-Removed Media from a Media Category
-
-
-Process finished with exit code 0
-
-
-## Phase 4: Task 3
-- The very first thing I would do is to create an abstract class which all the classes responsible for the Pop-up 
-messages will extend. All classes responsible for the Pop-up messages in the UI are very similar, except the message
-printed and the size of the message is different for each pop-up message. Therefore, I will simply override the method 
-popUpWindowMessages and tailor it to the desirable size it needs to be and what it needs to print based on the message.
-This will reduce a lot of duplication as well.
-- Another thing I would do is add exception handling. My code won’t break, but the way it is designed is that a media 
-rating can only be from 0-10. But if a user types in an integer not within the legal range, an exception should be 
-thrown to indicate that.  
-- Furthermore, the way I designed the program is that if a media that already exists in a list of media is being added
-again, rather than throwing an exception to indicate that media already exists, it simply informs the user that the 
-media has been added even though it does not add it for the second time. Adding exception handling in such a case would 
-also be nice. 
-- Another big change I would make is the way I designed the layout of my MediaBaseGui class. Since I set the layout as 
-null, that results in me having to manually set specific values for setBounds of different JPanels and JLogo displayed 
-on the JFrame.  Now if I change the size of the JFrame, the JPanel will not align with one another and be all over the 
-place. If I want to fix such a problem currently, I will have to go through every JPanel or JLogo I added and change 
-their setBoundValue one at a time. In retrospect, and if I had more time I would have defined specific constants that 
-will allow me to have a Single Point of Control—so if I do change the size of the JFrame, I will just need to make 
-slight changes at one place.
-- In MediaBaseGUI class I also need to increase cohesion. That class does way too many things: creates JFrame, creates
-various JPanels, creates more JPanels, adds Buttons, Labels and TextFields to those the JPanels, and then does specific
-tasks like add, remove, view, create media or media category. I should definitely have the MediaBaseGUI class design 
-the JFrame, but delegate the responsibility of correctly adding, removing, viewing, and creating media or media 
-category to a new class. I can increase even more cohesion by creating not only one but four different classes which 
-deal with each of the responsibilities. The only problem I see is that passing parameters from the MediaBaseGUI class 
-to another class may make the implementation a bit more complex, but I certainly think it is doable, and it will help
-with increasing cohesion.
-
-
 ## note to user
 Currently, nothing in the mediaBase has been saved. So when you do use it, you should first create a media category, 
 like Movies or Manga or Anime—whatever you like. From there you can add medias to that media category you created. Be
@@ -96,14 +46,5 @@ careful that you type the exact name of the media category for "pick a media cat
 have to be correct but also if the letters are uppercase or lowercase. You can add as many medias or remove as many
 medias as you like. You can also view the medias you have added to a media category by adding the media category you 
 want to view for "Select Media Category" and then by clicking view. You can save what you have created if you like. 
-
-## what I want to do
-- I want to be able to change the rating of the media
-- I want to be able to have a drop-down menu for all possible media-category
-- I want to be able to disable buttons if they at a certain point can't be used
-- I want to be able to have pseudo text that tells a person what they should add
-- I want to throw exception for invalid ratings
-- I want to have exit browsers after a certain period of time
-- I want to reduce duplication for the pop-up-messages.
 
 
