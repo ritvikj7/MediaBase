@@ -3,9 +3,9 @@
 
 The following is addressed in this README:
 
-What will this application do?
-The motivation behind developing this application
-Example uses of the application
+- What will this application do?
+- The motivation behind developing this application
+- Example uses of the application
 
 ## What will this application do?
 This application aims to **store and rank different sorts of media a user has watched or read**—that could 
